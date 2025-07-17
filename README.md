@@ -1,0 +1,5 @@
+首先需要说明本项目适合新手学习使用
+项目使用的模型为inception_v3，使用的生成对抗图片的算法为FGSM
+create_ad.py文件用于将的orinal_images文件里面的3.png图片基于FGSM算法生成对抗性样本，并输入到adversarial_images文件夹中
+dic&idct.py文件用于将对抗性样本（adversarial_images文件夹中的图片）进行dct和idct操作，可以理解为防御
+verify_defense.py是将原图（orinal_images），生成的对抗样本图（adversarial_images），降噪图（denoised_images）分别输入inception_v3，并对比最终的分类情况
